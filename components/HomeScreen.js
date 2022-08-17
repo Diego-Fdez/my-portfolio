@@ -20,7 +20,7 @@ const HomeScreen = () => {
         <Button title='Contacto' marginTop={'mt-8'} type='button' />
         <div className='bg-new w-60 h-60 -z-10 blur-custom rounded-middle absolute top-16 left-0'></div>
       </div>
-      <div className='flex flex-1 relative justify-center items-center top-2 md:top-16'>
+      <div className='flex flex-1 relative justify-center items-center top-2 md:top-16 mb-6 md:mb-0'>
         <ImageScreen
           image={'/3D render.png'}
           alt={'3D Robot Fly'}

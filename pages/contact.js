@@ -24,7 +24,7 @@ const Contact = () => {
         contactActive={contactActive}
         setContactActive={setContactActive}
       />
-      <aside className='flex justify-center items-center gap-3'>
+      <aside className='flex justify-center items-center gap-3 mb-6'>
         <h1 className='text-lg md:text-xl font-bold'>Ponte en contacto</h1>
         <FontAwesomeIcon
           icon={faComments}
