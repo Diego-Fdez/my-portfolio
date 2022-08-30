@@ -12,6 +12,9 @@ module.exports = {
       lineHeight: {
         95: '95px',
       },
+      height: {
+        46: '182px',
+      },
       borderRadius: {
         '5xl': '32px',
         '6xl': '64px',
@@ -30,6 +33,9 @@ module.exports = {
       },
       blur: {
         custom: '150px',
+      },
+      borderColor: {
+        custom: '#fcbc02',
       },
     },
     plugins: [],

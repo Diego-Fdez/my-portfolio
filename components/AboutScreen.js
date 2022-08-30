@@ -3,15 +3,16 @@ import { faLaptop } from '@fortawesome/free-solid-svg-icons';
 import { faSearchengin } from '@fortawesome/free-brands-svg-icons';
 import SkillsScreen from './SkillsScreen';
 import Button from './Button';
+import Link from 'next/link';
 
 const AboutScreen = () => {
   return (
     <main className='flex flex-col w-full h-full  items-center justify-center relative'>
       <div className='bg-new w-60 h-60 -z-10 blur-custom rounded-middle absolute top-8 -left-8 hidden md:flex'></div>
       <div className='flex flex-col w-3/4'>
-        <h1 className='text-4xl md:text-7xl font-bold text-custom2 text-center mt-8 md:mt-16'>
+        <h1 className='text-3xl md:text-7xl font-bold text-custom2 text-center mt-8 md:mt-16'>
           Servicios de desarrollo{' '}
-          <span className='text-4xl md:text-7xl font-bold text-custom'>
+          <span className='text-3xl md:text-7xl font-bold text-custom'>
             web
           </span>
         </h1>
@@ -23,7 +24,8 @@ const AboutScreen = () => {
         </p>
       </div>
       <aside className='flex flex-col md:flex-row justify-center items-center p-3 w-3/4 gap-10 md:gap-14 mt-6'>
-        <div className='flex flex-col gap-3 p-3 justify-center items-center w-80 glass'>
+        <div className='flex flex-col gap-3 p-3 justify-center items-center w-72 glass relative'>
+          <div className='absolute w-40 h-40 border-t-2 border-l-4 border-solid border-custom -left-4 -top-3 -z-10'></div>
           <FontAwesomeIcon
             icon={faSearchengin}
             className='text-custom text-5xl'
@@ -36,7 +38,8 @@ const AboutScreen = () => {
             resultados de búsqueda?
           </p>
         </div>
-        <div className='flex flex-col gap-3 p-3  justify-center items-center w-80 glass'>
+        <div className='flex flex-col gap-3 p-3  justify-center items-center w-72 glass relative'>
+          <div className='absolute w-40 h-40 border-b-2 border-r-4 border-solid border-custom -right-4 -bottom-3 -z-10'></div>
           <FontAwesomeIcon icon={faLaptop} className='text-custom text-5xl' />
           <h6 className='text-lg font-semibold text-custom2'>
             Creación de sitio web
@@ -48,7 +51,11 @@ const AboutScreen = () => {
         </div>
       </aside>
       <div className='mt-8'>
-        <Button title={'Portafolio'} />
+        <Link href={'/portfolio'}>
+          <a>
+            <Button title={'Ver Portafolio'} marginTop={'mt-0'} type='button' />
+          </a>
+        </Link>
       </div>
       <SkillsScreen />
     </main>

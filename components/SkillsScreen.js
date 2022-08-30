@@ -13,7 +13,7 @@ const SkillsScreen = () => {
             <li>
               <div className='flex justify-start items-center gap-'>
                 <div className='w-10 h-10 rounded-middle'>
-                  <LogoScreen src={'/Html5.png'} alt={'Logo Html5'} />
+                  <LogoScreen src={'/Html5.webp'} alt={'Logo Html5'} />
                 </div>
                 <p className='font-bold'>Html</p>
               </div>
@@ -29,7 +29,10 @@ const SkillsScreen = () => {
             <li className='mt-4'>
               <div className='flex justify-start items-center gap-2'>
                 <div className='w-10 h-10 rounded-middle'>
-                  <LogoScreen src={'/JavaScript.png'} alt={'Logo JavaScript'} />
+                  <LogoScreen
+                    src={'/JavaScript.webp'}
+                    alt={'Logo JavaScript'}
+                  />
                 </div>
                 <p className='font-bold'>JavaScript</p>
               </div>
@@ -37,9 +40,17 @@ const SkillsScreen = () => {
             <li className='mt-4'>
               <div className='flex justify-start items-center gap-2'>
                 <div className='w-10 h-10 rounded-middle'>
-                  <LogoScreen src={'/React.png'} alt={'Logo React'} />
+                  <LogoScreen src={'/React.webp'} alt={'Logo React'} />
                 </div>
                 <p className='font-bold'>React</p>
+              </div>
+            </li>
+            <li className='mt-4'>
+              <div className='flex justify-start items-center gap-2'>
+                <div className='w-10 h-10 rounded-middle'>
+                  <LogoScreen src={'/Next.webp'} alt={'Logo Next JS'} />
+                </div>
+                <p className='font-bold'>Next JS</p>
               </div>
             </li>
           </ul>
@@ -47,7 +58,7 @@ const SkillsScreen = () => {
             <li>
               <div className='flex justify-start items-center gap-'>
                 <div className='w-10 h-10 rounded-middle'>
-                  <LogoScreen src={'/MongoDB.png'} alt={'Logo MongoDB'} />
+                  <LogoScreen src={'/MongoDB.webp'} alt={'Logo MongoDB'} />
                 </div>
                 <p className='font-bold'>MongoDB</p>
               </div>
@@ -55,7 +66,7 @@ const SkillsScreen = () => {
             <li className='mt-4'>
               <div className='flex justify-start items-center gap-2'>
                 <div className='w-10 h-10 rounded-middle'>
-                  <LogoScreen src={'/MySQL.png'} alt={'Logo MySQL'} />
+                  <LogoScreen src={'/MySQL.webp'} alt={'Logo MySQL'} />
                 </div>
                 <p className='font-bold'>MySQL</p>
               </div>
@@ -63,7 +74,7 @@ const SkillsScreen = () => {
             <li className='mt-4'>
               <div className='flex justify-start items-center gap-2'>
                 <div className='w-10 h-10 rounded-middle'>
-                  <LogoScreen src={'/fireBase.png'} alt={'Logo Firebase'} />
+                  <LogoScreen src={'/fireBase.webp'} alt={'Logo Firebase'} />
                 </div>
                 <p className='font-bold'>Firebase</p>
               </div>
@@ -71,15 +82,23 @@ const SkillsScreen = () => {
             <li className='mt-4'>
               <div className='flex justify-start items-center gap-2'>
                 <div className='w-10 h-10 rounded-middle'>
-                  <LogoScreen src={'/Node.png'} alt={'Logo NodeJS'} />
+                  <LogoScreen src={'/Node.webp'} alt={'Logo NodeJS'} />
                 </div>
                 <p className='font-bold'>Node JS</p>
+              </div>
+            </li>
+            <li className='mt-4'>
+              <div className='flex justify-start items-center gap-2'>
+                <div className='w-10 h-10 rounded-middle'>
+                  <LogoScreen src={'/tailwind.webp'} alt={'Logo TailwindCSS'} />
+                </div>
+                <p className='font-bold'>TailwindCSS</p>
               </div>
             </li>
           </ul>
         </div>
         <ImageScreen
-          image={'/Robot 3D y Logos.png'}
+          image={'/Robot-3D-y-Logos.webp'}
           alt={'Robot 3D + Logos'}
           color={'bg-custom2'}
         />

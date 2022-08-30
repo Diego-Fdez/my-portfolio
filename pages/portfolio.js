@@ -1,25 +1,27 @@
-import Head from 'next/head';
+import PortfolioScreen from '../components/PortfolioScreen';
 import NavBar from '../components/NavBar';
-import AboutScreen from '../components/AboutScreen';
+import Head from 'next/head';
 
-const About = () => {
+const Portfolio = () => {
   return (
     <>
       <Head>
-        <title>Acerca de - Diego Fedez</title>
+        <title>Portafolio - Diego Fedez</title>
         <meta
           name='description'
-          content='acerca de mi, conoce mis proyectos de desarrollo web, freelance, React developer'
+          content='portafolio web developer creado en next js'
         />
         <meta name='robots' content='index, follow' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
         <meta charset='utf-8' />
+        <meta name='author' content='Diego Fedez' />
+        <meta name='copyright' content='Diego Fedez' />
       </Head>
       <NavBar />
-      <AboutScreen />
+      <PortfolioScreen />
     </>
   );
 };
 
-export default About;
+export default Portfolio;

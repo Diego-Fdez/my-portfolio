@@ -27,7 +27,7 @@ const NavBar = () => {
   }, [router.pathname]);
 
   return (
-    <div className='flex justify-center items-center w-screen h-14 md:h-24 relative md:top-4 overflow-hidden z-20 transition-all bg-transparent'>
+    <header className='flex justify-center items-center w-full h-14 md:h-24 md:top-4 relative overflow-hidden z-20 transition-all bg-transparent'>
       <nav className='flex justify-center w-11/12 md:w-128 md:h-24 rounded-6xl fixed bg-neutral-800'>
         {/* inicio */}
         <ul className='nav-list flex'>
@@ -93,7 +93,7 @@ const NavBar = () => {
                       : 'opacity-0'
                   } btn-text text-neutral-800 text-xs md:text-xl font-bold transition-all`}
                 >
-                  <Link href='/'>Portafolio</Link>
+                  <Link href='/portfolio'>Portafolio</Link>
                 </span>
               </span>
             </label>
@@ -168,7 +168,7 @@ const NavBar = () => {
           </li>
         </ul>
       </nav>
-    </div>
+    </header>
   );
 };
 

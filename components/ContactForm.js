@@ -1,18 +1,45 @@
 import Button from './Button';
-// import { mailer } from '../helpers/email';
+import emailjs from '@emailjs/browser';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmarkCircle } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
+import { useForm } from 'react-hook-form';
 
 const ContactForm = ({ contactActive, setContactActive }) => {
   const [loading, setLoading] = useState(false);
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    // mailer({ name, email, message });
+  // the form hook variables are declared
+  const {
+    handleSubmit,
+    register,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  /**
+   * It sends an email using emailjs
+   */
+  const sendEmail = ({ name, email, message }) => {
+    setLoading(true);
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        { name, email, message },
+        process.env.NEXT_PUBLIC_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          toast.success('Correo enviado, me pondré en contacto pronto');
+          setLoading(false);
+          reset();
+        },
+        (error) => {
+          toast.error('Oh! sucedió un error, vuelve a intentar.');
+          setLoading(false);
+        }
+      );
   };
 
   return (
@@ -36,43 +63,64 @@ const ContactForm = ({ contactActive, setContactActive }) => {
             onClick={() => setContactActive(!contactActive)}
           />
         </div>
-        <div
+        <form
           id='inputs'
           className='w-full flex flex-col items-start justify-start'
+          onSubmit={handleSubmit(sendEmail)}
         >
           <input
             type='text'
             name='name'
             className='w-full px-2 py-[12px] mb-4 rounded-md bg-dark-100 border-[2px] border-none outline-none '
             placeholder='Full Name'
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            {...register('name', {
+              required: 'Please enter your name',
+              minLength: {
+                value: 4,
+                message: 'The name must have at least 4 characters',
+              },
+              maxLength: {
+                value: 38,
+                message: 'The name must have a maximum of 12 characters',
+              },
+            })}
           />
-
+          {/* react hook forms errors */}
+          {errors.name && toast.error(errors.name.message)}
           <input
-            type='mail'
+            type='email'
             name='email'
             className='w-full px-2 py-[12px] mb-4 rounded-md bg-dark-100 border-[2px] border-none outline-none '
             placeholder='johndoe@mail.com'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            {...register('email', {
+              required: 'Please enter an email',
+              pattern: {
+                value:
+                  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i,
+                message: 'Please enter a valid email',
+              },
+            })}
           />
-
+          {/* react hook forms errors */}
+          {errors.email && toast.error(errors.email.message)}
           <textarea
             cols='30'
             rows='5'
             name='message'
             className='w-full h-full bg-dark-100 resize-none rounded-md outline-none px-2 py-2 mb-3'
             placeholder='Message'
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            {...register('message', {
+              required: 'Please enter your message',
+            })}
           ></textarea>
+          {/* react hook forms errors */}
+          {errors.message && toast.error(errors.message.message)}
           <Button
-            title={'Send Message'}
+            title={loading ? 'Sending' : 'Send Message'}
             marginTop={'mt-6'}
-            onClick={() => handleSubmit()}
+            type='submit'
           />
-        </div>
+        </form>
       </div>
     </div>
   );

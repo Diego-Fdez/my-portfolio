@@ -10,7 +10,7 @@ const ContactScreen = ({ contactActive, setContactActive }) => {
       <div className='bg-new w-60 h-60 -z-10 blur-custom rounded-middle absolute top-8 -left-8 hidden md:flex'></div>
       <article className='flex flex-col md:flex-row h-full items-center justify-center my-24'>
         <ImageScreen
-          image={'/3D render Robot.png'}
+          image={'/3D render Robot.webp'}
           alt={'3D Robot whiteboard'}
           color={'bg-custom'}
         />
@@ -21,7 +21,7 @@ const ContactScreen = ({ contactActive, setContactActive }) => {
               className='text-custom text-5xl hover:cursor-pointer hover:text-custom2 transition-all duration-200'
               onClick={() => setContactActive(!contactActive)}
             />
-            <Link href='mailto:dieghoxcr7@gmail.com' passHref>
+            <Link href='mailto:info.diegodev@gmail.com' passHref>
               <a target='_blank' rel='noopener noreferrer'>
                 <p className='text-custom2 text-lg cursor-pointer hover:text-custom transition-colors duration-200'>
                   dieghoxcr7@gmail.com
@@ -30,10 +30,7 @@ const ContactScreen = ({ contactActive, setContactActive }) => {
             </Link>
           </div>
           <div className='flex flex-col md:flex-row items-center gap-2'>
-            <Link
-              href='https://api.whatsapp.com/send?phone+50683215708'
-              passHref
-            >
+            <Link href='https://wa.me/50683215708' passHref>
               <a target='_blank' rel='noopener noreferrer'>
                 <FontAwesomeIcon
                   icon={faWhatsapp}
