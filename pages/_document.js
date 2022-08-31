@@ -10,6 +10,12 @@ const _document = () => {
           href='https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap'
           rel='stylesheet'
         />
+        <script
+          src='https://platform.linkedin.com/badges/js/profile.js'
+          async
+          defer
+          type='text/javascript'
+        ></script>
       </Head>
       <body>
         <Main />

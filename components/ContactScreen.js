@@ -52,7 +52,7 @@ const ContactScreen = ({ contactActive, setContactActive }) => {
                 />
               </a>
             </Link>
-            <p className='text-custom2 text-lg cursor-pointer hover:text-custom transition-colors duration-200'>
+            {/* <p className='text-custom2 text-lg cursor-pointer hover:text-custom transition-colors duration-200'>
               <Link
                 href='https://www.linkedin.com/in/diego-fernandez-montero-8614a7186?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BY2r8dOVASE2Dp9k1XVitfA%3D%3D'
                 passHref
@@ -61,7 +61,23 @@ const ContactScreen = ({ contactActive, setContactActive }) => {
                   Ver Perfil
                 </a>
               </Link>
-            </p>
+            </p> */}
+            <div
+              className='badge-base LI-profile-badge'
+              data-locale='en_US'
+              data-size='medium'
+              data-theme='dark'
+              data-type='VERTICAL'
+              data-vanity='diego-fernandez-montero-8614a7186'
+              data-version='v1'
+            >
+              <a
+                className='badge-base__link LI-simple-link'
+                href='https://cr.linkedin.com/in/diego-fernandez-montero-8614a7186?trk=profile-badge'
+              >
+                Diego Fernandez Montero
+              </a>
+            </div>
           </div>
         </div>
       </article>
