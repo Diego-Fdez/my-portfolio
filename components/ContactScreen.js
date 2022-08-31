@@ -24,7 +24,7 @@ const ContactScreen = ({ contactActive, setContactActive }) => {
             <Link href='mailto:info.diegodev@gmail.com' passHref>
               <a target='_blank' rel='noopener noreferrer'>
                 <p className='text-custom2 text-lg cursor-pointer hover:text-custom transition-colors duration-200'>
-                  dieghoxcr7@gmail.com
+                  info.diegodev@gmail.com
                 </p>
               </a>
             </Link>
