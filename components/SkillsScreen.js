@@ -4,9 +4,7 @@ import LogoScreen from './LogoScreen';
 const SkillsScreen = () => {
   return (
     <article className='flex flex-col justify-center items-center mt-8 mb-6 w-11/12'>
-      <h4 className='text-xl md:text-3xl'>
-        Mis conocimientos y/o habilidades:
-      </h4>
+      <h4 className='text-xl md:text-3xl'>Mis conocimientos/habilidades:</h4>
       <div className='flex flex-col md:flex-row mt-8 gap-10'>
         <div className='flex glass w-80 p-4 justify-center items-center'>
           <ul>
