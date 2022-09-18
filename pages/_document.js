@@ -34,6 +34,7 @@ const _document = () => {
           }}
         />
         <meta name='msvalidate.01' content='1F541F8455388E11051F4A0619010DAC' />
+        <meta httpEquiv='content-language' content='es-es' />
       </Head>
       <body>
         <Main />
