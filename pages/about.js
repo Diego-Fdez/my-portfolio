@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import NavBar from '../components/NavBar';
 import AboutScreen from '../components/AboutScreen';
+import Image from 'next/image';
 
 const About = () => {
   return (
@@ -17,6 +18,15 @@ const About = () => {
         <meta charset='utf-8' />
       </Head>
       <NavBar />
+      <div className='relative hidden md:flex md:-m-[120px] md:ml-16 m-6 md:mb-[40px] overflow-hidden'>
+        <Image
+          src={'/logo.png'}
+          alt={'logo-Diego-Fedez'}
+          width={170}
+          height={170}
+          className='flex relative '
+        />
+      </div>
       <AboutScreen />
     </>
   );

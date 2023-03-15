@@ -7,7 +7,7 @@ const HomeScreen = () => {
   const router = useRouter();
 
   return (
-    <main className='flex flex-col md:flex-row w-full h-full  items-center justify-center relative'>
+    <main className='flex flex-col md:flex-row w-full h-full items-center justify-center relative'>
       <article className='flex flex-col h-full items-center justify-center my-24 px-8'>
         <h1 className='text-3xl md:text-7xl font-bold'>
           Hola, Soy Diego{' '}
@@ -15,8 +15,15 @@ const HomeScreen = () => {
             Fedez
           </span>
         </h1>
-        <h4 className='text-xl md:text-3xl'>
-          Ingeniero de software / desarrollador web, vivo en Costa Rica.
+        <h4 className='text-l md:text-2xl'>
+          Ingeniero de software / desarrollador web. Me especializo en el diseño
+          y desarrollo de sitios web intuitivos y funcionales que se adaptan a
+          las necesidades de los usuarios finales. Además, tengo experiencia en
+          la integración de API de terceros y en la creación de soluciones
+          escalables y seguras. Tengo un sólido conocimiento en lenguajes de
+          programación como JavaScript, así como en frameworks populares como
+          React, Next JS, NodeJS. Como desarrollador, siempre estoy buscando
+          nuevas formas de mejorar la eficiencia y la calidad del código.
         </h4>
         <Link href={'/contact'}>
           <a>

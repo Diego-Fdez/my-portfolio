@@ -7,6 +7,7 @@ import ContactForm from '../components/ContactForm';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComments } from '@fortawesome/free-solid-svg-icons';
 import { ToastContainer } from 'react-toastify';
+import Image from 'next/image';
 
 const Contact = () => {
   const [contactActive, setContactActive] = useState(false);
@@ -25,6 +26,15 @@ const Contact = () => {
         <meta charset='utf-8' />
       </Head>
       <NavBar />
+      <div className='relative hidden md:flex md:-m-[120px] md:ml-16 m-6 md:-mb-[13px] overflow-hidden'>
+        <Image
+          src={'/logo.png'}
+          alt={'logo-Diego-Fedez'}
+          width={170}
+          height={170}
+          className='flex relative '
+        />
+      </div>
       <ContactForm
         contactActive={contactActive}
         setContactActive={setContactActive}
